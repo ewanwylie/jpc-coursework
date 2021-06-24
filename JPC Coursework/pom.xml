@@ -40,7 +40,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>util</mainClass>
+                            <mainClass>UserInterface</mainClass>
                         </configuration>
                     </execution>
                 </executions>
