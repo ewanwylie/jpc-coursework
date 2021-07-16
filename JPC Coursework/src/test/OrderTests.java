@@ -42,4 +42,8 @@ public class OrderTests {
 		}
 	}
 	
+	//public void testNullParameter() throws IllegalArgumentException {
+		//new Order("Unassigned", null);
+	// }
+
 }
