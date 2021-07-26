@@ -21,11 +21,10 @@ public class OrderTests {
 		shelfUIDs.add("ss0");
 		shelfUIDs.add("ss1");
 		shelfUIDs.add("ss2");
-		String status = "Unassigned";
-		Order order = new Order(status, shelfUIDs);
+		Order order = new Order(shelfUIDs, 3);
 		
 		assertTrue(order.getUIDs().containsAll(shelfUIDs));
-		assertTrue(order.getStatus().contains(status));
+		assertTrue(order.getStatus().toString().contains("Unassigned"));
 	}
 	
 	@Test
@@ -34,7 +33,7 @@ public class OrderTests {
 	 */
 	public void testNullParameter() {
 		try {
-			new Order("Unassigned", null);
+			new Order(null, 1);
 			fail("A null parameter should fail.");
 		} catch (Exception e) {
 			assertEquals("An order requires at least one StorageShelf UID to demonstrate the items to be collected.",
@@ -42,8 +41,4 @@ public class OrderTests {
 		}
 	}
 	
-	//public void testNullParameter() throws IllegalArgumentException {
-		//new Order("Unassigned", null);
-	// }
-
 }
