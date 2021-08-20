@@ -13,8 +13,5 @@ public enum Status {
 	Collected, // Is complete, ready to be processed
 	Dispatched, // Has been packed 
 	Charging,  // Applicable to robot only, is attached to a charging station or moving towards it.
-	Picking,
-	Awaiting,
-	Packing,
-	Dispatching
 }
+    
