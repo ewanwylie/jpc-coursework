@@ -7,7 +7,7 @@ public class Robot extends Cell.Entity {
 		final int newRow = cell.getRow() + dRow;
 		final int newCol = cell.getColumn() + dColumn;
 
-		final Grid grid = cell.getBoard();
+		final Grid grid = cell.getGrid();
 		if (grod.isValidPosition(newRow, newCol)) {
 			Cell targetCell = grid.getCell(newRow, newCol);
 			targetCell.addEntity(this);
