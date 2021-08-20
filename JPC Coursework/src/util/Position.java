@@ -5,7 +5,7 @@ package util;
  * @author CJ Glue
  * @version 09/08/2021 
  */
-
+ 
 public class Position {
 	private int column;
 	private int row;

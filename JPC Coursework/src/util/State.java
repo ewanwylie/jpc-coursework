@@ -6,4 +6,4 @@ public enum State {
 	toShelf, // Not carrying anything, heading towards a storage shelf.
 	toStation, // Carrying item(s), heading towards the packing station.
 	toPod, // Not carrying anything, heading to the charging pod.
-} 
+}  

@@ -4,7 +4,7 @@ import util.Entity;
 /**
  * Base interface for all objects within the simulation.
  * @author CJ Glue
- * @version 09/08/2021  
+ * @version 09/08/2021    
  */
 
 public interface Entity {

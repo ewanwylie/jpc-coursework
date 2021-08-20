@@ -4,7 +4,7 @@ import java.util.Set;
 
 /**
  * Base abstract class for all objects within the simulation.
- * @author CJ Glue
+ * @author CJ Glue 
  * @version 09/08/2021 
  */
 

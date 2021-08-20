@@ -14,4 +14,4 @@ public enum Status {
 	Dispatched, // Has been packed 
 	Charging,  // Applicable to robot only, is attached to a charging station or moving towards it.
 }
- 
+  
