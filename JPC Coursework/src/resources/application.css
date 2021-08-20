@@ -1,0 +1,9 @@
+.grid {
+  -fx-background-color: white ;
+  -fx-padding: 10 ;
+}
+
+.gridCell {
+  -fx-background-color: black, white ;
+  -fx-background-insets: 0, 1 ;
+}

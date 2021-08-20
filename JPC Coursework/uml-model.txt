@@ -1,0 +1,57 @@
+@startuml
+
+title Classes - Grid
+
+class Grid {
+  - cells: Cell[]
+  - width: int
+  - height: int
+  + Grid(width: int, height: int)
+  + getCell(row: int, col: int): Cell
+  + getWidth(): int
+  + getHeight(): int
+  + isValidPosition(row: int, col: int): boolean
+}
+
+Grid *-- "*" Cell
+
+class Robot  {
+  + move(dRow: int, dCol: int)
+}
+Entity <|-left- Robot
+
+abstract class Entity {
+  - cell: Cell
+  + getCell(): Cell
+  ~ setCell(c: Cell)
+}
+
+Cell o-left- "*" Entity
+
+class Cell {
+  - grid: Grid
+  - row: int
+  - col: int
+  - entities: ListProperty<Entity>
+  + Cell(grid: Grid, row: int, col: int)
+  + getGrid(): Grid
+  + getRow(): int
+  + getColumn(): int
+  + removeEntity(e: Entity)
+  + addEntity(e: Entity)
+  + entitiesProperty(): ListProperty<Entity>
+}
+
+class Warehouse {
+  - grid: Grid
+  - robot: Robot
+  + Warehouse(g: Grid)
+  + getGrid(): Grid
+  + getRobot(): Robot
+  + addRobot(row: int, col: int)
+}
+
+Warehouse *-right- Grid
+Warehouse -- "0..1" Robot: controls
+
+@enduml
