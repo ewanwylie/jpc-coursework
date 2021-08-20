@@ -26,15 +26,15 @@ public class MainWindowController {
 	public void initialize() {
 		grid.getChildren().clear();
 
-		for (int iRow = 0; iRow < game.getGrid().getHeight(); iRow++) {
-			for (int iCol = 0; iCol < game.getGrid().getWidth(); iCol++) {
+		for (int iRow = 0; iRow < warehouse.getGrid().getHeight(); iRow++) {
+			for (int iCol = 0; iCol < warehouse.getGrid().getWidth(); iCol++) {
 				StackPane pane = new StackPane();
 				pane.setPrefWidth(50);
 				pane.setPrefHeight(50);
 				pane.getStyleClass().add("gridCell");
 				grid.add(pane, iCol, iRow);
 
-				final Cell cell = game.getGrid().getCell(iRow, iCol);
+				final Cell cell = warehouse.getGrid().getCell(iRow, iCol);
 
 				// First draw
 				redrawCell(pane, cell.entitiesProperty().get());
