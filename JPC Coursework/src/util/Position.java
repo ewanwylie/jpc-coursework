@@ -2,7 +2,7 @@ package util;
 
 /**
  * Represents a single position within the warehouse grid.
- * @author CJ Glue
+ * @author CJ Glue 
  * @version 09/08/2021 
  */
  

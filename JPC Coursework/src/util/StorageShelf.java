@@ -19,7 +19,5 @@ public class StorageShelf extends Actor{
 		// Can share space with a single robot.
 		return other instanceof Robot;
 	}
-	
-	
 
 } 

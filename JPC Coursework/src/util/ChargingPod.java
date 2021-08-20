@@ -6,7 +6,7 @@ package util;
  * that robot. It charges the robot that shares its location if they are
  * owned, which takes a set number of ticks.
  * @author CJ Glue
- * @version 09/08/2021  
+ * @version 09/08/2021   
  */
 
 public class ChargingPod extends Actor{
