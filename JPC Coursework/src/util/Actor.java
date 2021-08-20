@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * Base abstract class for all objects within the simulation.
  * @author CJ Glue
- * @version 09/08/2021
+ * @version 09/08/2021 
  */
 
 public abstract class Actor implements Entity {

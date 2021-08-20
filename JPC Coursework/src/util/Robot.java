@@ -5,7 +5,7 @@ import java.util.Queue;
 /**
  * Class to represent a single robot within the simulation.
  * @author CJ Glue
- * @version 09/08/2021
+ * @version 09/08/2021 
  */
 
 public class Robot extends Actor {
