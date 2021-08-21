@@ -64,5 +64,12 @@ public class Cell {
 	public ListProperty<Entity> entitiesProperty() {
 		return entities;
 	}
+	
+	public final int getManhattanDistanceTo(Cell cell) {
+		int differenceInColumns = Math.abs(this.getColumn() - cell.getColumn());
+		int differenceInRows = Math.abs(this.getRow() - cell.getRow());
+
+		return differenceInColumns + differenceInRows;
+	}
 
 }
