@@ -23,6 +23,9 @@ public class Cell {
 
 	private final Grid grid;
 	private final int row, column;
+	private Cell previousCellInPath;
+	private int numberOfStepsFromStart;
+	private double distanceToTarget;
 	private ListProperty<Entity> entities
 		= new SimpleListProperty<>(FXCollections.observableArrayList());
 
@@ -65,6 +68,41 @@ public class Cell {
 		return entities;
 	}
 	
-	
+	public boolean equals(Cell cell) {
+		if (cell == null)
+			return false;
 
+		return (this.row == cell.getRow()) && (this.column == cell.getColumn());
+	}
+	
+	public Cell getPreviousCellInPath() {
+		return this.previousCellInPath;
+	}
+
+	public void setPreviousCellInPath(Cell previousCell) {
+		this.previousCellInPath = previousCell;
+	}
+	
+	public int getNumberOfStepsFromStart() {
+		return this.numberOfStepsFromStart;
+	}
+
+	public void setNumberOfStepsFromStart(int steps) {
+		this.numberOfStepsFromStart = steps;
+	}
+
+	public double getDistanceToTarget() {
+		return this.distanceToTarget;
+	}
+	
+	public void setDirectDistanceToTarget(double distanceToTarget) {
+		this.distanceToTarget = distanceToTarget;
+	}
+	
+	public final int getManhattanDistanceTo(Cell cell) {
+		int differenceInColumns = Math.abs(this.getColumn() - cell.getColumn());
+		int differenceInRows = Math.abs(this.getRow() - cell.getRow());
+
+		return differenceInColumns + differenceInRows;
+	}
 }

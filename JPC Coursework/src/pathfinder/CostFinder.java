@@ -39,11 +39,5 @@ public class CostEstimator<F extends Enum<F>> {
   public double getEstimatedCost() {
     return this.estimatedCost;
   }
-  
-  public final int getManhattanDistanceTo(Cell cell) {
-		int differenceInColumns = Math.abs(this.getColumn() - cell.getColumn());
-		int differenceInRows = Math.abs(this.getRow() - cell.getRow());
 
-		return differenceInColumns + differenceInRows;
-	}
 }
